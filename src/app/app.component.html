@@ -1,5 +1,7 @@
 <div class="mt-10">
-  <img class="w-72 h-full mx-auto" src="assets/images/Black%20logo%20-%20no%20background.svg">
+  <a href="/">
+    <img class="w-72 h-full mx-auto" src="assets/images/Black%20logo%20-%20no%20background.svg">
+  </a>
 </div>
 
 <div class="font overflow-hidden  h-auto w-1/2 mx-auto text-lg">
@@ -21,18 +23,18 @@
     </div>
 
   </div>
-  <div class="grid grid-cols-4 gap-4">
+  <div class="grid lg:grid-cols-4 gap-4 grid-cols-1">
     <article
       *ngFor="let item of list$ | async"
-      class="overflow-hidden rounded-lg shadow transition hover:shadow-lg bg-white mt-2 h-auto w-52 border border-slate-300">
+      class=" rounded-lg shadow transition hover:shadow-lg bg-white mt-2 h-auto w-52 border border-slate-300">
       <img
         class="h-10 w-14 object-cover mx-auto"
         src="./assets/images/Color%20logo%20-%20no%20background.svg"/>
-      <div class="bg-white p-4 sm:p-6">
+      <div class="bg-white p-4 sm:p-6 rounded-lg">
         <time class="block text-xs text-gray-500">
           {{todayDate | date:'YYYY-MM-dd'}}
         </time>
-        <p class="block mt-2 text-md leading-relaxed text-gray-500 line-clamp-3">
+        <p class="mt-2 text-md leading-relaxed text-gray-500 line-clamp-3 break-words">
           {{item.name}}
         </p>
       </div>

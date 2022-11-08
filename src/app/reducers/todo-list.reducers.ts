@@ -8,7 +8,7 @@ export interface TodoListState {
 
 export const initialState: TodoListState = {
   list: [{
-    name: 'Siemanko'
+    name: 'Cześć'
   }],
 }
 
