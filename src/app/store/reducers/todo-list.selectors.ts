@@ -8,3 +8,13 @@ export const getList = createSelector(
   (state: TodoListState) => state.list
 );
 
+export const getById = (id: string) => createSelector(getList, (allItems) => {
+  if (allItems) {
+    return allItems.find(item => {
+      return item.id === id;
+    });
+  } else {
+    return {};
+  }
+});
+

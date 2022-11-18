@@ -1,0 +1,28 @@
+<!--<p *ngIf="user$ | async">Logged</p>-->
+
+<label
+  for="title"
+  class="relative block overflow-hidden pt-3 my-5 border-none lg:w-1/2">
+  <input
+    #name
+    type="text"
+    id="name"
+    placeholder="name"
+    class="peer h-8 w-full text-white p-2 rounded-lg lg:text-xl sm:text-sm mb-5"
+    style="background-color: #363647"
+  />
+  <input
+    #password
+    type="password"
+    id="title"
+    placeholder="password"
+    class="peer h-8 w-full text-white p-2 rounded-lg lg:text-xl sm:text-sm"
+    style="background-color: #363647"
+  />
+</label>
+
+<button (click)="login()"
+        class="rounded-full  px-5 py-2.5 text-sm font-medium text-white" style="background-color: #6F6FC8">Saved
+</button>
+
+

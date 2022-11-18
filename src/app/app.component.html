@@ -1,48 +1,8 @@
-<div class="mt-10">
-  <a href="/">
-    <img class="w-72 h-full mx-auto" src="assets/images/Black%20logo%20-%20no%20background.svg">
-  </a>
-</div>
-
 <div class="font overflow-hidden w-11/12 h-auto lg:w-1/2  mx-auto text-lg">
-  <div class="mt-10 mx-auto object-center relative mb-10">
-
-    <div >
-      <input #input
-             type="text"
-             placeholder="text..."
-             class="w-full h-20 pl-5 rounded-md border-gray-200 py-2.5 pr-10 shadow-sm border border-slate-300"
-             style="font-family: Oswald-Regular, sans-serif;"
-      />
-
-      <span class="absolute inset-y-0 right-0 grid w-10 place-content-center mr-5">
-  <button (click)="addTodo(input)" color="primary" mat-mini-fab>
-      <mat-icon>add</mat-icon>
-    </button>
-  </span>
-    </div>
-
-  </div>
-  <div class="grid lg:grid-cols-4 lg:gap-4 grid-cols-1">
-    <article
-      *ngFor="let item of list$ | async"
-      class=" rounded-lg shadow transition hover:shadow-lg bg-white mt-2 h-auto border border-slate-300 mx-1.5">
-      <img
-        class="h-10 w-14 object-cover mx-auto"
-        src="./assets/images/Color%20logo%20-%20no%20background.svg"/>
-      <div class="bg-white p-4 sm:p-6 rounded-lg">
-        <time class="block text-xs text-gray-500">
-          {{todayDate | date:'YYYY-MM-dd'}}
-        </time>
-        <p class="mt-2 text-md leading-relaxed text-gray-500 line-clamp-3 break-words">
-          {{item.name}}
-        </p>
-      </div>
-
-    </article>
-  </div>
+  <app-navbar></app-navbar>
+  <router-outlet>
+  </router-outlet>
 </div>
-
 
 
 

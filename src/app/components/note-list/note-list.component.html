@@ -1,0 +1,22 @@
+<section class="mt-10">
+  <div class="grid lg:grid-cols-4 lg:gap-4 grid-cols-2">
+    <article
+      *ngFor="let item of list$ | async"
+      [routerLink]="['/notes/edit', item.id]"
+      class="rounded-lg transition hover:shadow-lg h-auto m-2 "
+    style="background-color: #363647">
+      <time class="block text-xs text-white ml-20 bottom-0">
+        {{todayDate | date:'YYYY-MM-dd'}}
+      </time>
+      <div class="m-5">
+      <p class="break-words text-white">{{item.title}} </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<span class="fixed bottom-0 right-0 place-content-center m-4">
+  <button routerLink="/notes/add" mat-fab style="background-color: #6F6FC8">
+      <mat-icon>add</mat-icon>
+    </button>
+  </span>

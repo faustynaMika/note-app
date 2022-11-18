@@ -1,0 +1,39 @@
+<button mat-icon-button (click)="delete(note.id)">
+  <mat-icon style="color:white;">delete</mat-icon>
+</button>
+<label
+  for="title"
+  class="relative block overflow-hidden pt-3">
+  <input
+    #title
+    [value]="note.title"
+    type="text"
+    id="title"
+    placeholder="title"
+    class="peer h-8 w-full text-white p-2 rounded-lg lg:text-xl sm:text-sm"
+    style="background-color: #363647"
+  />
+</label>
+
+<div>
+
+</div>
+
+<label
+  for="description"
+  class="relative block overflow-hidden pt-3">
+  <textarea
+    #description
+    [value]="note.description"
+    id="description"
+    rows="15"
+    placeholder="description"
+    class="peer resize-none text-white w-full rounded-lg p-2 lg:text-xl sm:text-sm"
+    style="background-color: #363647"></textarea>
+</label>
+
+<span class="fixed bottom-0 right-0 place-content-center m-4">
+  <button mat-fab (click)="addOrUpdate(title.value, description.value)" style="background-color: #6F6FC8">
+      <mat-icon>add</mat-icon>
+    </button>
+  </span>
